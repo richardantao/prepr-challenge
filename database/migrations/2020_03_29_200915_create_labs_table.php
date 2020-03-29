@@ -14,7 +14,13 @@ class CreateLabsTable extends Migration
     public function up()
     {
         Schema::create('labs', function (Blueprint $table) {
-            $table->id();
+            $table->increments("id");
+            $table->string("title");
+            $table->float("latitude");
+            $table->float("longitude");
+            $table->string("address");
+            $table->string("city");
+            $table->string("country");
             $table->timestamps();
         });
     }
