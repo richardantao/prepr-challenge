@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Prepr Challenge') }}</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/popper.min.js"></script> -->
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,13 +19,36 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+
+        main {
+            position: relative;
+            right: 10%;
+        }
+
+        #dashboard {
+            position: relative;
+                top: 100px;
+                right: 200px;
+        }
+
+        #list {
+            max-height: 500px;
+            width: 65%;
+            overflow-y: scroll;
+        }
+
+        .card-header {
+            margin-bottom: .5rem;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Prepr Challenge') }}
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -65,6 +89,15 @@
                                         @csrf
                                     </form>
                                 </div>
+                                <!-- <div>
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                    </form>
+                                </div> -->
                             </li>
                         @endguest
                     </ul>
@@ -72,12 +105,10 @@
             </div>
         </nav>
 
-        <!-- <main class="py-4">
+        <main class="py-4">
             @yield('content')
-        </main> -->
-        <div id="dashboard"></div> <!-- inherit dashboard from react -->
+        </main>
     </div>
     
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
 </html>

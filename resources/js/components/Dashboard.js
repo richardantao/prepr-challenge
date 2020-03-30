@@ -47,14 +47,16 @@ class Dashboard extends Component {
         return (
             <> 
                 { isLoading ? <Loading/> :
-                    <Container>
+                    // <Container>
                         <Row className="justify-content-center">
                             <List labs={labs}/>
-                            <MapContainer
-                                labs={labs}
-                            />      
+                            {/* <div className="col-md-8"> */}
+                                <MapContainer
+                                    labs={labs}
+                                />   
+                            {/* </div> */}
                         </Row>
-                    </Container>
+                    // </Container>
                 }
             </>
         );

@@ -7,12 +7,12 @@ import Search from "./Search";
 export default ({ labs }) => {
     
     return (
-        <div className="col-md-8">
+        <div className="col-md-4" >
             <Row>
                 <Search/>
             </Row>
             <Row>
-                <Col>
+                <Col id="list">
                     { !labs ? 
                         <div>No labs</div>
                     : labs.map(({ id, title, address }) => {

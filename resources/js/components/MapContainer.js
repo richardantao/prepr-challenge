@@ -29,15 +29,15 @@ export class MapContainer extends Component {
       return (
           <Map
             google={this.props.google}
-            zoom={8}
+              zoom={4}
             style={{
-                width: '100%',
+                width: '67%',
                 height: '100%',
               }}
-            initialCenter={{ lat: 43.560501, lng: -79.709709}}
+            initialCenter={{ lat: 37.2976606, lng: 60.3206942}}
           >
             {markers}
-          </Map>
+          </Map>          
       );
     };
 };
