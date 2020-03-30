@@ -25,6 +25,8 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@ishawnwang/withunmounted": "^1.0.1",
+        "google-maps-react": "^2.0.2",
         "react-helmet": "^5.2.1",
         "react-router-dom": "^5.1.2",
         "reactstrap": "^8.4.1"

@@ -9,7 +9,9 @@ class LabsController extends Controller
 {
     public function index() 
     {
-        $labs = Lab::all();
-        return view('labs.index')->with('labs', $labs); // map to dashboard
+        $labs =  Lab::all();
+
+        // return view('dashboard')->with('labs', $labs);
+        return $labs;
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-export default () => {
+const Example = () => {
     return (
         <div className="container">
             <div className="row justify-content-center">
@@ -16,3 +16,9 @@ export default () => {
         </div>
     );
 };
+
+if(document.getElementById("example")) {
+    render( <Example/>, document.getElementById("example"))
+}
+
+export default Example;

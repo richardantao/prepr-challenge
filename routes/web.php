@@ -20,3 +20,5 @@ Route::get('/', function() {
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::view('/{path?}', 'index'); // redirects all first level paths to index view
